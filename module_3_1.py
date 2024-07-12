@@ -15,13 +15,12 @@ def is_contains():
     list_to_search = list()
     string = input("Слово: ")
     list_to_search.extend(list(input("Список слов: ").split(' ')))
+    list_to_search = list(map(str.lower, list_to_search))
 
     if string.casefold() in list_to_search:
         print(True)
     else:
         print(False)
-
-    print(list_to_search)
 
 string_info()
 is_contains()
